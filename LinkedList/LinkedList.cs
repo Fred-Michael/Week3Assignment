@@ -34,7 +34,6 @@ namespace LinkedList
                 check = check.Next;
                 Console.WriteLine(check.Value);
             }
-            //Console.WriteLine("NULL");
         }
         public void Remove()
         {
