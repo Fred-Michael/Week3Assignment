@@ -1,27 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
-using System.IO;
-using System.Text;
 
 namespace LinkedList
 {
-    public class LinkedList<T> : ICollection<T>
+    public class LinkedList<T> : IEnumerable<T>
     {
         public int Count { get; private set; }
         public Node<T> Head { get; private set; }
         public Node<T> Tail { get; private set; }
-
-        public bool IsReadOnly => throw new NotImplementedException();
-        public bool GetHead(T value)
-        {
-            throw new NotImplementedException();
-        }
-        public bool GetTail(T value)
-        {
-            throw new NotImplementedException();
-        }
         public void AddHead(T value)
         {
             var extraNode = new Node<T>(value);
@@ -61,23 +48,7 @@ namespace LinkedList
                 Tail = extraNode;
                 Count++;
             }
-            //extraNode.Previous = Tail.Previous;
         }
-
-        //public LinkedList()
-        //{
-        //    Head = new Node<T>();
-        //    Tail = Head;
-        //}
-        //public int Add(T value)
-        //{
-        //    Node<T> extraNode = new Node<T>();
-        //    extraNode.Value = value;
-        //    Tail.Next = extraNode;
-        //    Tail = extraNode;
-        //    Console.WriteLine("item has been added to the LinkedList");
-        //    return Count++;
-        //}
         public void print()
         {
             var check = Head;
@@ -137,42 +108,16 @@ namespace LinkedList
         {
             return Count == 0;
         }
-
-        #region ICollections section
-        void ICollection<T>.Add(T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Clear()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Contains(T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void CopyTo(T[] array, int arrayIndex)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(T item)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
         }
 
+        //one more method to be implemented
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             throw new NotImplementedException();
         }
-        #endregion 
     }
 }
