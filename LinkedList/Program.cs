@@ -10,9 +10,9 @@ namespace LinkedList
         {
             Console.WriteLine("---Start: Linkedlist Demo---");
             var linkClass = new LinkedList<int>();
-            linkClass.Add(4);
-            linkClass.Add(7);
-            linkClass.Add(11);
+            //linkClass.Add(4);
+            //linkClass.Add(7);
+            //linkClass.Add(11);
             //Console.WriteLine("\nPrinting items in the linkedlist:");
             //linkClass.print();
             //Console.WriteLine("\nChecking if LinkedList contains specified value:");
